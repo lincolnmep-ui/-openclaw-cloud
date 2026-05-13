@@ -10,4 +10,4 @@ USER node
 
 EXPOSE 18789
 
-CMD openclaw gateway start
+CMD npx openclaw gateway start --foreground
