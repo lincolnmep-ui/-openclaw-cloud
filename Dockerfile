@@ -10,5 +10,4 @@ USER node
 
 EXPOSE 18789
 
-# 同时启动 Gateway 和 Telegram bot
-CMD sh -c "openclaw gateway start & node /home/node/.openclaw/telegram-bot.js"
+CMD openclaw gateway start
