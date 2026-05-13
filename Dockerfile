@@ -10,4 +10,6 @@ USER node
 
 EXPOSE 18789
 
+ENV OPENCLAW_FOREGROUND=1
+
 ENTRYPOINT ["openclaw", "gateway", "start"]
