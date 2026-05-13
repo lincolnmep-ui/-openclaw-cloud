@@ -4,11 +4,10 @@ WORKDIR /app
 
 RUN npm install -g openclaw
 
-RUN mkdir -p /home/node/.openclaw/workspace
-RUN chown -R node:node /home/node
+RUN mkdir -p /home/node/.openclaw/workspace && chown -R node:node /home/node
 
 USER node
 
 EXPOSE 18789
 
-CMD ["sh", "-c", "openclaw gateway start"]
+ENTRYPOINT ["openclaw", "gateway", "start"]
