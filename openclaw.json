@@ -1,0 +1,43 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/home/node/.openclaw/workspace",
+      "memorySearch": {
+        "enabled": false
+      },
+      "models": {
+        "anthropic/claude-haiku-4-5-20251001": {}
+      },
+      "model": {
+        "primary": "anthropic/claude-haiku-4-5-20251001"
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token"
+    },
+    "port": 18789,
+    "bind": "lan"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "groups": {
+        "*": {
+          "requireMention": true
+        }
+      },
+      "botToken": "8487391960:AAE_8Y0wVYCDbflGFFaPbo6ZB2k9QoIw5pw"
+    }
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      }
+    }
+  }
+}
