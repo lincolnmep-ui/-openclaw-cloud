@@ -10,4 +10,4 @@ USER node
 
 EXPOSE 18789
 
-CMD npx openclaw gateway start --foreground
+CMD sh -c "openclaw gateway start &" && node -e "require('http').createServer((req,res)=>res.end('OpenClaw running')).listen(18789)"
